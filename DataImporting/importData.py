@@ -26,7 +26,7 @@ while True:
         oneManFeatures = [];
 
 
-print (len(allmanFeatures[1]))
+# print (len(allmanFeatures[1]))
 
 trainingLabels = []
 for i in range(0,270):
@@ -57,7 +57,16 @@ while True:
         alltestFeatures.append(oneTestFeatures);
         oneTestFeatures = [];
 
+testingLabels = []
+blockLengthes = [31, 35, 88, 44, 29, 24, 40, 50, 29];
 
+total = 0
+for j in range(0,len(blockLengthes)):
+    num = blockLengthes[j];
+    for k in range(total, total + num):
+        testingLabels.append(j + 1);
+
+print (len(testingLabels))
 
     
 
