@@ -122,6 +122,10 @@ for i in range(0,270):
     starter = starter+datalength
     processedTrainingData.append(oneManProcessed)
 
+processedTraningDataFrame = pd.DataFrame(processedTrainingData)
+print(processedTraningDataFrame.shape)
+processedTraningDataFrame.to_csv('training.csv')
+
 
 
 testingStarter = 0
@@ -135,6 +139,10 @@ for i in range(0, sum(blockLengthes)):
         oneTestingProcessed.append(list(onecoloum.values))
     testingStarter = testingStarter + datalength
     processedTestingData.append(oneTestingProcessed)
+
+processedTestngDataFrame = pd.DataFrame(processedTestingData)
+print(processedTestngDataFrame.shape)
+processedTestngDataFrame.to_csv('testing.csv')
 
 
         # print(principalDf.iloc[0:25, :]) 
