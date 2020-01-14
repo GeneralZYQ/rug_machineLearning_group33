@@ -2,6 +2,7 @@
 import numpy as np
 
 # Data_reduced = np.load('training.csv',allow_pickle=True) #or something
+
 Data_reduced2 = [] #want this to have 270 rows, each column is an array of length 4, should have 9 columns (as we reduced 12 lines to 9 lines in PCA)
 for i in range(1,270): #later should do 370 for test data
     Data_reduced2.append([])
